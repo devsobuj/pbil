@@ -216,9 +216,11 @@ p.update {
     font-size: 12px;
     font-weight: normal;
 }
-
-.menus {
-    width: 100%;
+.menus{
+    display: flex;
+}
+.menus_cotainer {
+    width: 50%;
     /* background: red; */
     display: flex;
     border: 1px solid #ffffff6e;
@@ -227,8 +229,7 @@ li.d-flex.align-items-top.mb-2 {
     align-items: baseline;
 }
 .menu_name {
-    width: 25%;
-    
+    width: 50%;
     border-right: 1px solid #ffffff6e;
 }
 .menu_name a{
@@ -406,4 +407,73 @@ ul.single_left_menu li button {
 ul.news_list li {
     font-size: 18px;
     margin-bottom: 3px;
+}
+
+@media screen and (max-width:1000px) {
+    body{
+        overflow: unset;
+    }
+    .home_section , .container_3{
+        flex-direction: column;
+    }
+    .home_left{
+        width: 100%;
+        height: 450px;
+    }
+    .carousel-inner{
+        height: 450px;
+    }
+    .carousel-item img{
+        height: 450px;
+    }
+    .carousel{
+        position: unset;
+    }
+    .home-right,.first_nav_side,.middle_side{
+        width: 100%;
+    }
+    .first_nav_side{
+        height: unset;
+    }
+    .middle_side{
+        position: unset;
+    }
+    .right_menu_icon{
+        color: #324ea2;
+    }
+    .menu_icon{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+    }
+    .menus{
+        flex-direction: column;
+    }
+    .menus_cotainer{
+        width: 100%;
+    }
+    .nav_area{
+        overflow-y: scroll;
+    }
+    .middle_side{
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width:370px) {
+    
+    .home_left{
+       
+        height: 250px;
+    }
+    .carousel-inner{
+        height: 250px;
+    }
+    .carousel-item img{
+        height: 250px;
+    }
+    .carousel{
+        position: unset;
+    }
+    
 }
