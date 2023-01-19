@@ -484,3 +484,16 @@ ul.news_list li {
     }
     
 }
+.event_year_area{
+    position: relative;
+}
+.event_year_area::before{
+    content: '';
+    height: 100%;
+    width: 2px;
+    border: 3px dashed rgb(250, 250, 250);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
