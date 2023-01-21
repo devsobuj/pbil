@@ -414,8 +414,14 @@ ul.news_list li {
     body{
         overflow: unset;
     }
+    .middle_side{
+        height: unset;
+    }
     .home_section , .container_3{
         flex-direction: column;
+    }
+    .hasOverflow{
+        overflow-y: unset;
     }
     .home_left{
         width: 100%;
@@ -508,4 +514,94 @@ ul.news_list li {
     position: absolute;
     left: 50%;
     top: 0;
+}
+.year_name {
+    font-size: 25px;
+    font-weight: bold;
+    border: 7px solid #fff;
+    text-align: center;
+    color:  #fff;
+    padding: 25px;
+}
+.right_year , .left_year {
+    position: relative;
+}
+
+.right_year::before , .left_year::before{
+    content: '';
+    width: 20%;
+    background: #fff;
+    color: #fff;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right_year::after , .left_year::after{
+    content: '';
+    width: 20px;
+    background: #fff;
+    color: #fff;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+}
+.right_year::before {
+    right: 0;
+}
+.right_year::after {
+    right: -10px;
+}
+.left_year::before {
+    left: 0;
+}
+.left_year::after {
+    left: -10px;
+}
+
+@media screen and (max-width:768px) {
+    .event_year_area::before{
+        left: 0;
+    }
+    .event_year_area.mt-5 .row .col-md-12 {
+        margin-bottom: 35px;
+    }
+    .left_year::after , .right_year::after{
+        left: 2px;
+    }
+    .left_year::before , .right_year::before {
+        left: 5px;
+        width: 18%;
+    }
+    .row.align-items-center.colmn_reverse {
+        flex-direction: row-reverse;
+    }
+    .row.align-items-center.colmn_reverse .text-end{
+        text-align: left !important;
+    }
+    
+}
+@media screen and (max-width:570px) {
+    .row.align-items-center.colmn_reverse {
+        flex-direction: column-reverse;
+    }
+    .year_box{
+        margin-left: 10%;
+    }
+    .left_year::before, .right_year::before {
+        left: 5px;
+        width: 12%;
+        top: 35px;
+    }
+    .left_year::after , .right_year::after{
+        left: 2px;
+        top: 35px;
+    }
+    .year_name{
+        width: 200px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
 }
